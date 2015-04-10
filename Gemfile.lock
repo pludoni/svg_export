@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    svg_export (0.0.1)
+    svg_export (0.0.2)
       nokogiri
       rails (>= 4.0.0)
 

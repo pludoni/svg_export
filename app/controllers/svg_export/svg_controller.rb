@@ -11,6 +11,7 @@ module SvgExport
         file = wrapper.()
       rescue SvgExport::Error => e
         render :text => "Unable to export image;\n #{e}", status: 422
+        return
       end
       send_file file, type: wrapper.type, filename: wrapper.filename, disposition: 'attachment', stream: false
     end

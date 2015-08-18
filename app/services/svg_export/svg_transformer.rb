@@ -1,6 +1,6 @@
 module SvgExport
   class SvgTransformer
-    def initialize(base_url, options={})
+    def initialize(options={})
       @tempfiles = []
       @base_url = options[:base_url]
     end

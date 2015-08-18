@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/svg_export.svg)](http://badge.fury.io/rb/svg_export)
+
 # Svg-Export Engine for Ruby on Rails
 
 Highcharts compliant svg-rasterizer. To find more about Highcharts Exporting, look [here](http://www.highcharts.com/docs/export-module/export-module-overview)

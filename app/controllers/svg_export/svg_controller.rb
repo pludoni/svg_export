@@ -14,6 +14,7 @@ module SvgExport
         return
       end
       send_file file, type: wrapper.type, filename: wrapper.filename, disposition: 'attachment', stream: false
+
     end
   end
 end

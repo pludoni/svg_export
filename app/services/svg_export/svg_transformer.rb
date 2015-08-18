@@ -5,6 +5,12 @@ module SvgExport
       @base_url = options[:base_url]
     end
 
+    def clear!
+      @tempfiles.each do |tf|
+        tf.unlink
+      end
+    end
+
     def transform(svg)
       doc = Nokogiri::XML.parse(svg)
       doc.search('image').each do |image|
@@ -48,7 +54,12 @@ module SvgExport
           end
         end
       end
-      nil
+      without_hash = partial_path.gsub(/-([0-9a-f]+)(\.\w+)$/, '\2')
+      if without_hash != partial_path
+        find_asset_path(without_hash)
+      else
+        nil
+      end
     end
   end
 end

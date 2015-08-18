@@ -12,6 +12,9 @@ module SvgExport
     def call
       transformer = @svg_transformer.new(@options)
       svg = transformer.transform(params[:svg])
+      File.open('/tmp/jobwert-export-last.svg', 'w+') do |f|
+        f.write svg
+      end
       infile.write(svg)
       infile.flush
       result = run!
@@ -19,6 +22,7 @@ module SvgExport
       if fs.nil? || fs < 10
         raise SvgExport::Error.new( "Output file empty;  #{result}")
       end
+      transformer.clear!
       File.open(outfile)
     end
 

@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/svg_export.svg)](http://badge.fury.io/rb/svg_export)
+[![Gem Version](https://rubygems.org/gems/svg_export)](http://img.shields.io/gem/v/svg_export.svg)
 
 # Svg-Export Engine for Ruby on Rails
 

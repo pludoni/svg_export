@@ -1,6 +1,6 @@
 module SvgExport
   class SvgController < ApplicationController
-    skip_before_action :verify_authenticity_token
+    skip_before_action :verify_authenticity_token, raise: false
 
     def create
       if Engine.batik_path.blank?

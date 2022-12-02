@@ -40,7 +40,7 @@ module SvgExport
     protected
 
     def run!
-      cmd = "java -jar #{Engine.batik_path} -m #{type} -d #{outfile.path} #{width} #{infile.path} 2>&1"
+      cmd = "java -Djava.awt.headless=true -jar #{Engine.batik_path} -m #{type} -d #{outfile.path} #{width} #{infile.path} 2>&1"
       result = `#{cmd}`
       if result.index("success").nil?
         raise SvgExport::Error.new(result)
